@@ -1,8 +1,9 @@
 flask
 gunicorn
-git add ;
+git add 
 git commit -m "Fixed requirements"
 git push
+
 
 
 
