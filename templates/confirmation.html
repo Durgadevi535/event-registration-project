@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card p-4 text-center">
+    <h3>Registration Confirmed 🎉</h3>
+    <p>Thank you <strong>{{ name }}</strong> for registering for the <strong>{{ event }}</strong>.</p>
+    <a href="{{ url_for('register') }}" class="btn btn-success">Register Another Event</a>
+</div>
+
+{% endblock %}

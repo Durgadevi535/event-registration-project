@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="mb-4">Event Registration Form</h2>
+
+<form method="POST">
+
+    <div class="mb-3">
+        <label>Full Name</label>
+        <input type="text" name="name" class="form-control">
+        {% if errors.name %}
+            <small class="text-danger">{{ errors.name }}</small>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <input type="text" name="email" class="form-control">
+        {% if errors.email %}
+            <small class="text-danger">{{ errors.email }}</small>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        <label>Phone Number</label>
+        <input type="text" name="phone" class="form-control">
+        {% if errors.phone %}
+            <small class="text-danger">{{ errors.phone }}</small>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        <label>Select Event</label>
+        <select name="event" class="form-select">
+            <option value="">-- Choose Event --</option>
+            <option value="Workshop">Workshop</option>
+            <option value="Seminar">Seminar</option>
+            <option value="Webinar">Webinar</option>
+        </select>
+        {% if errors.event %}
+            <small class="text-danger">{{ errors.event }}</small>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        <label>Comments</label>
+        <textarea name="comments" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+
+</form>
+
+{% endblock %}
